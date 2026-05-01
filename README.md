@@ -148,6 +148,13 @@ This is similar to:
 - Implement gesture recognition  
 
 ---
+## Wiring
+
+<p align="center">
+  <img src="robohand.png" alt="RoboHand Demo" width="500"/>
+</p>
+
+---
 
 ## Conclusion
 
