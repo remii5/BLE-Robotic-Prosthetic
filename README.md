@@ -6,8 +6,6 @@ RoboHand is a wireless embedded system that translates human finger motion into 
 
 The goal of this project is to create an intuitive, low-latency human-to-robot interface using embedded systems principles, sensor calibration, and wireless communication.
 
----
-
 ## System Architecture
 
 ### 1. Flex Sensor Controller (ESP32-S3)
@@ -32,7 +30,6 @@ This subsystem reads and processes user input.
 #### Why it is necessary
 This subsystem interprets human motion. Without proper sensing and filtering, the robotic hand would behave inconsistently.
 
----
 
 ### 2. Servo Controller (ESP32-C6)
 
@@ -54,7 +51,6 @@ This subsystem receives commands and actuates the robotic hand.
 #### Why it is necessary
 The ESP32 cannot reliably control many servos directly. The PCA9685 ensures precise, jitter-free control across all fingers.
 
----
 
 ## System Behavior
 
@@ -66,7 +62,6 @@ The ESP32 cannot reliably control many servos directly. The PCA9685 ensures prec
 
 This results in near real-time mirroring between the human hand and robotic hand.
 
----
 
 ## Problems Encountered
 
@@ -77,14 +72,12 @@ Calibrating each servo’s range of motion was challenging. Each finger required
 
 Without this, motion did not accurately match the user’s hand.
 
----
 
 ### Mechanical Fatigue (Elastic Tendons)
 The elastic cords used to return fingers to their resting position wore down over time. This caused:
 - Drift in resting position  
 - Inconsistent behavior  
 
----
 
 ### 3D Printing Constraints
 Due to limited access to 3D printing:
@@ -92,7 +85,6 @@ Due to limited access to 3D printing:
 - These blocked tendon paths  
 - Reprinting was not feasible  
 
----
 
 ### Distributed Debugging
 Using two microcontrollers introduced complexity:
@@ -100,7 +92,6 @@ Using two microcontrollers introduced complexity:
 - BLE issues were harder to isolate  
 - I2C failures prevented servo actuation  
 
----
 
 ## Comparison to Real-World Embedded Systems
 
@@ -115,14 +106,12 @@ This is similar to:
 - Teleoperation systems  
 - Robotics interfaces  
 
----
 
 ### Differences
 - Open-loop system (no feedback from robotic hand)  
 - Position-based control instead of force control  
 - Less mechanical robustness than industrial systems  
 
----
 
 ## Future Improvements
 
@@ -147,14 +136,12 @@ This is similar to:
 - Add haptic feedback  
 - Implement gesture recognition  
 
----
 ## Wiring
 
 <p align="center">
   <img src="robohand.png" alt="RoboHand Demo" width="500"/>
 </p>
 
----
 
 ## Conclusion
 
